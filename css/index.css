@@ -1,0 +1,49 @@
+/*reset.css*/
+*{
+    padding: 0;
+    margin: 0;
+}
+ul > li {
+    list-style: none;
+}
+body {
+    background: lightgrey;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+/*tab.css*/
+.content {
+    width: 500px;
+}
+.tab_menu{
+    display: flex;
+}
+.tab > .tab_menu {
+    background: white;
+    margin: 0;
+}
+.tab > .tab_menu > li {
+    width: 14.2%;
+    padding: 10px 0;
+    text-align: center;
+}
+.tab_content {
+    background: white;
+    margin-top: 20px;
+    text-align: center;
+    padding: 200px 0;
+}
+.tab_content > div.select_content {
+    display: block;
+}
+.tab_content > div {
+    display: none;
+}
+.select_content {
+    font-size: 32px;
+}
+.select_menu {
+    font-weight: 600;
+    border-bottom: 3px solid deepskyblue;
+}

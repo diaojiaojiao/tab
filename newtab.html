@@ -2,59 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        ul,li,div{
-            padding:0;
-            margin:0;statuy
-        }
-        body{
-            background: lightgrey;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-        }
-        .content{
-            width:500px;
-        }
-        #menu{
-             background: white;
-        }
-        #menu>ul{
-            list-style: none;
-            display: flex;
-        }
-        #menu>ul>li{
-            width:20%;
-            padding: 10px 0;
-            text-align: center;
-        }
-        #main{
-            background: white;
-            margin-top:20px;
-            text-align: center;
-            padding:200px 0;
-        }
-        #main>.show{
-            display: block!important;
-        }
-        .select{
-            font-weight: 600; !important;
-            border-bottom: 3px solid deepskyblue;
-        }
-        #main>div{
-            display: none;
-        }
-        .line{
-            border-bottom: 3px solid deepskyblue;
-        }
-    </style>
+    <title>tab</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/tab.js"></script>
 </head>
 <body>
 <div class="content">
-    <div id="menu">
-        <ul >
-            <li class="select line">综合</li>
+    <div class="tab">
+        <ul class="tab_menu">
+            <li class="select_menu">综合</li>
             <li>用户</li>
             <li>话题</li>
             <li>专栏</li>
@@ -62,32 +18,16 @@
             <li>私家课</li>
             <li>电子书</li>
         </ul>
-    </div>
-    <div id="main">
-        <div class="show">我是综合</div>
-        <div >我是用户</div >
-        <div >我是话题</div >
-        <div >我是专栏</div >
-        <div >我是Live</div >
-        <div >我是私家课</div >
-        <div >我是电子书</div >
+        <div class="tab_content">
+            <div class="select_content">我是综合</div>
+            <div>我是用户</div>
+            <div>我是话题</div>
+            <div>我是专栏</div>
+            <div>我是Live</div>
+            <div>我是私家课</div>
+            <div>我是电子书</div>
+        </div>
     </div>
 </div>
-<script>
-        var main=document.getElementById("main");
-        var list=document.getElementsByTagName("li");
-        var box=main.getElementsByTagName("div");
-        for (var i=0;i<list.length;i++){
-            list[i].index=i;
-            list[i].onclick=function () {
-                for (var j=0;j<list.length;j++){
-                    list[j].className="";
-                    box[j].className="";
-                }
-                this.className="select";
-                box[this.index].className="show";
-            }
-        }
-</script>
 </body>
 </html>
